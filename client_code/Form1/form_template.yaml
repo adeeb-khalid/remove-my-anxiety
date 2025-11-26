@@ -1,12 +1,175 @@
 components:
 - layout_properties: {slot: default}
   name: content_panel
-  properties: {}
+  properties:
+    spacing_above: large
+    spacing_below: large
+    spacing: large
   type: ColumnPanel
+  components:
+  - layout_properties: {grid_position: 'KCOZAK,ZPZJLT'}
+    name: page_title_label
+    properties:
+      align: center
+      bold: true
+      role: headline
+      spacing_below: small
+      text: Welcome to Remove My Anxiety
+    type: Label
+  - layout_properties: {grid_position: 'KCOZAK,JKMTJW'}
+    name: page_subtitle_label
+    properties:
+      align: center
+      role: subheading
+      spacing_above: none
+      spacing_below: large
+      text: Your safe space for calm guidance, support, and growth
+    type: Label
+  - layout_properties:
+      full_width_row: true
+      grid_position: 'QSWYGD,WPKOVP'
+    name: hero_buttons
+    properties:
+      align: center
+      spacing: medium
+    type: FlowPanel
+    components:
+    - name: get_started_button
+      properties:
+        role: primary-color
+        text: Get Started
+      type: Button
+    - name: daily_practice_button
+      properties:
+        role: filled-button
+        text: Daily Practices
+      type: Button
+    - name: resources_button
+      properties:
+        role: tonal-button
+        text: Resource Library
+      type: Button
+  - layout_properties:
+      full_width_row: true
+      grid_position: 'TQSYCV,GUJGMH'
+    name: content_layout_flow
+    properties:
+      spacing: large
+      wrap_on: mobile
+    type: FlowPanel
+    components:
+    - name: side_nav_panel
+      properties:
+        role: card
+        spacing: medium
+        width: 240px
+      type: ColumnPanel
+      components:
+      - layout_properties: {grid_position: 'OWYFMS,UDQANR'}
+        name: side_nav_title
+        properties:
+          bold: true
+          role: subheading
+          text: Quick Navigation
+        type: Label
+      - layout_properties: {grid_position: 'FFNGHH,RAALXB'}
+        name: side_nav_description
+        properties:
+          text: Choose a section to explore tools and guidance.
+        type: Label
+      - layout_properties: {grid_position: 'KXFZMA,BGEJFE'}
+        name: nav_daily_checkins
+        properties:
+          icon: fa:calendar-check-o
+          text: Daily Check-ins
+        type: Link
+      - layout_properties: {grid_position: 'MFYIAB,XACUNE'}
+        name: nav_guided_sessions
+        properties:
+          icon: fa:heartbeat
+          text: Guided Sessions
+        type: Link
+      - layout_properties: {grid_position: 'AWDZPK,ILZRXE'}
+        name: nav_breathing_tools
+        properties:
+          icon: fa:leaf
+          text: Breathing Tools
+        type: Link
+      - layout_properties: {grid_position: 'HNWQDT,IZBNHU'}
+        name: nav_progress_tracker
+        properties:
+          icon: fa:line-chart
+          text: Progress Tracker
+        type: Link
+      - layout_properties: {grid_position: 'VJNXFM,DRMKFE'}
+        name: side_nav_sample_values
+        properties:
+          role: text
+          text: "Sample metrics:\n• Check-ins completed: 3\n• Exercises this week: 5\n• Calm streak: 4 days"
+        type: Label
+    - name: main_content_panel
+      properties:
+        role: card
+        spacing: medium
+        spacing_above: none
+      type: ColumnPanel
+      components:
+      - layout_properties: {grid_position: 'KXKMNM,DVMHJJ'}
+        name: main_heading_label
+        properties:
+          bold: true
+          role: subheading
+          text: Start your calm journey
+        type: Label
+      - layout_properties: {grid_position: 'KXKMNM,XZMMYG'}
+        name: intro_paragraph_label
+        properties:
+          role: text
+          text: Remove My Anxiety pairs compassionate guidance with science-backed
+            tools so you can feel grounded, supported, and confident every day.
+        type: Label
+      - layout_properties: {grid_position: 'FKTYTJ,ESKRLI'}
+        name: highlights_label
+        properties:
+          bold: true
+          text: Today's highlights
+        type: Label
+      - layout_properties: {grid_position: 'FKTYTJ,JTSKDM'}
+        name: highlights_rich_text
+        properties:
+          content: "- Guided grounding exercise tailored to your mood\n- Progress snapshot with encouraging milestones\n- Tip of the day to stay centered"
+          format: markdown
+        type: RichText
+      - layout_properties: {grid_position: 'YVBGFD,OJAKQF'}
+        name: encouragement_label
+        properties:
+          italic: true
+          role: text
+          text: You are not alone—every visit is a step toward a calmer mind.
+        type: Label
 - layout_properties: {slot: nav-right}
   name: navbar_links
-  properties: {}
+  properties:
+    align: right
+    spacing: medium
   type: FlowPanel
+  components:
+  - name: nav_home_link
+    properties:
+      bold: true
+      icon: fa:home
+      text: Home
+    type: Link
+  - name: nav_exercises_link
+    properties:
+      icon: fa:sun-o
+      text: Exercises
+    type: Link
+  - name: nav_support_link
+    properties:
+      icon: fa:comments
+      text: Support
+    type: Link
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
