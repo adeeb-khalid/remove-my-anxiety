@@ -14,13 +14,10 @@ class Form1(Form1Template):
     # Clear existing content
     self.content_panel.clear()
     
-    # Main container with centered alignment and padding
+    # Main container with vertical spacing
     main_container = ColumnPanel(
       spacing_above='large',
-      spacing_below='large',
-      spacing_left='medium',
-      spacing_right='medium',
-      align='center'
+      spacing_below='large'
     )
     
     # Welcome headline - using headline role from Material theme
@@ -46,8 +43,6 @@ class Form1(Form1Template):
       role="card",
       spacing_above='medium',
       spacing_below='medium',
-      spacing_left='large',
-      spacing_right='large',
       spacing='medium'
     )
     
@@ -93,8 +88,7 @@ class Form1(Form1Template):
     # Call-to-action section
     cta_container = ColumnPanel(
       spacing_above='large',
-      spacing_below='large',
-      align='center'
+      spacing_below='large'
     )
     
     cta_label = Label(
